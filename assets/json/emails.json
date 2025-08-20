@@ -1,0 +1,404 @@
+{
+    "emails": [
+        {
+            "id": 1,
+            "title": "5 productivity tips from top performers",
+            "subtitle": "Learn how successful people work",
+            "category": "Important",
+            "isRead": false,
+            "imageUrl": "assets/images/mirror_circle.png"
+            
+        },
+        {
+            "id": 2,
+            "title": "Your order has been shipped",
+            "subtitle": "Your package is on its way!",
+            "category": "Promotions",
+            "isRead": true,
+            "imageUrl": "assets/images/order.png"
+        },
+        {
+            "id": 3,
+            "title": "Security alert for your account",
+            "subtitle": "We noticed a new login to your account",
+            "category": "Important",
+            "isRead": false,
+               "imageUrl": "assets/images/play.png"
+        },
+        {
+            "id": 4,
+            "title": "Weekend getaway ideas for you",
+            "subtitle": "Discover cozy cabins and unique places",
+            "category": "Promotions",
+            "isRead": true,
+               "imageUrl": "assets/images/house.png"
+        },
+        {
+            "id": 5,
+            "title": "You have 3 new connection requests",
+            "subtitle": "Expand your network with these people",
+            "category": "Important",
+            "isRead": false,
+               "imageUrl": "assets/images/sunset.png"
+        },
+        {
+            "id": 6,
+            "title": "Monthly newsletter: Tips and Junk",
+            "subtitle": "Stay informed with our latest news",
+            "category": "Junk",
+            "isRead": true,
+               "imageUrl": "assets/images/display.png"
+        },
+        {
+            "id": 7,
+            "title": "Your subscription is expiring soon",
+            "subtitle": "Renew now to keep your benefits",
+            "category": "Important",
+            "isRead": false,
+            "imageUrl": "assets/images/premium.png"
+        },
+        {
+            "id": 8,
+            "title": "Exclusive offer just for you!",
+            "subtitle": "Get 20% off your next purchase",
+            "category": "Promotions",
+            "isRead": true,
+            "imageUrl": "assets/images/typing.png"
+        },
+        {
+            "id": 9,
+            "title": "New features added to your favorite app",
+            "subtitle": "Check out what's new in the latest update",
+            "category": "Junk",
+            "isRead": false,
+             "imageUrl": "assets/images/house.png"
+        },
+        {
+            "id": 10,
+            "title": "Reminder: Upcoming event registration",
+            "subtitle": "Don't miss out on this opportunity",
+            "category": "Important",
+            "isRead": true,
+             "imageUrl": "assets/images/laptop.png"
+        },
+        {
+            "id": 11,
+            "title": "Your feedback is important to us",
+            "subtitle": "Help us improve our services",
+            "category": "Junk",
+            "isRead": false,
+             "imageUrl": "assets/images/read.png"
+        },
+        {
+            "id": 12,
+            "title": "Flash sale: Limited time only!",
+            "subtitle": "Grab the best deals before they're gone",
+            "category": "Promotions",
+            "isRead": true,
+             "imageUrl": "assets/images/guitar.png"
+        },
+        {
+            "id": 13,
+            "title": "New job opportunities available",
+            "subtitle": "Explore exciting career options",
+            "category": "Junk",
+            "isRead": false,
+             "imageUrl": "assets/images/lock.png"
+        },
+        {
+            "id": 14,
+            "title": "Your account settings have been updated",
+            "subtitle": "Review your changes and preferences",
+            "category": "Important",
+            "isRead": true,
+             "imageUrl": "assets/images/order.png"
+        },
+        {
+            "id": 15,
+            "title": "Join our webinar on industry trends",
+            "subtitle": "Learn from experts in the field",
+            "category": "Junk",
+            "isRead": false,
+             "imageUrl": "assets/images/house.png"
+        },
+        {
+            "id": 16,
+            "title": "Special invitation to our VIP event",
+            "subtitle": "You're invited to an exclusive gathering",
+            "category": "Promotions",
+            "isRead": true,
+             "imageUrl": "assets/images/premium.png"
+        },
+        {
+            "id": 17,
+            "title": "Invoice for your recent purchase",
+            "subtitle": "Download your invoice here",
+            "category": "Important",
+            "isRead": false,
+             "imageUrl": "assets/images/cup.png"
+        },
+        {
+            "id": 18,
+            "title": "Congratulations! You won a prize",
+            "subtitle": "Claim your reward before it expires",
+            "category": "Promotions",
+            "isRead": false,
+             "imageUrl": "assets/images/guitar.png"
+        },
+        {
+            "id": 19,
+            "title": "Important system maintenance notice",
+            "subtitle": "Scheduled downtime this weekend",
+            "category": "Important",
+            "isRead": true,
+             "imageUrl": "assets/images/house.png"
+        },
+        {
+            "id": 20,
+            "title": "Get your free e-book today",
+            "subtitle": "Limited-time educational resource",
+            "category": "Promotions",
+            "isRead": false,
+             "imageUrl": "assets/images/read.png"
+        },
+        {
+            "id": 21,
+            "title": "Unusual activity detected",
+            "subtitle": "Review login attempts immediately",
+            "category": "Important",
+            "isRead": false,
+             "imageUrl": "assets/images/dressing_mirror.png"
+        },
+        {
+            "id": 22,
+            "title": "Daily inspiration quotes",
+            "subtitle": "Motivation to start your day",
+            "category": "Junk",
+            "isRead": true,
+             "imageUrl": "assets/images/clouds.png"
+        },
+        {
+            "id": 23,
+            "title": "50% off fitness gear",
+            "subtitle": "Upgrade your workout essentials",
+            "category": "Promotions",
+            "isRead": false,
+             "imageUrl": "assets/images/typing.png"
+        },
+        {
+            "id": 24,
+            "title": "Travel deals you can't miss",
+            "subtitle": "Plan your dream vacation now",
+            "category": "Promotions",
+            "isRead": true,
+             "imageUrl": "assets/images/display.png"
+        },
+        {
+            "id": 25,
+            "title": "Verify your email address",
+            "subtitle": "Complete your sign-up process",
+            "category": "Important",
+            "isRead": false,
+             "imageUrl": "assets/images/typing.png"
+        },
+        {
+            "id": 26,
+            "title": "Update available for your device",
+            "subtitle": "Install the latest version now",
+            "category": "Important",
+            "isRead": true,
+            "imageUrl": "assets/images/house.png"
+        },
+        {
+            "id": 27,
+            "title": "Your subscription renewal was successful",
+            "subtitle": "Thank you for staying with us",
+            "category": "Important",
+            "isRead": true,
+             "imageUrl": "assets/images/premium.png"
+        },
+        {
+            "id": 28,
+            "title": "Top 10 recipes this month",
+            "subtitle": "Discover trending dishes",
+            "category": "Junk",
+            "isRead": false,
+             "imageUrl": "assets/images/cup.png"
+        },
+        {
+            "id": 29,
+            "title": "Mega electronics sale!",
+            "subtitle": "Save big on latest gadgets",
+            "category": "Promotions",
+            "isRead": false,
+             "imageUrl": "assets/images/premium.png"
+        },
+        {
+            "id": 30,
+            "title": "Congratulations on your achievement",
+            "subtitle": "Celebrate your success with us",
+            "category": "Promotions",
+            "isRead": true,
+             "imageUrl": "assets/images/guitar.png"
+        },
+        {
+            "id": 31,
+            "title": "Survey: Share your opinion",
+            "subtitle": "Win a voucher for participation",
+            "category": "Junk",
+            "isRead": false,
+             "imageUrl": "assets/images/lock.png"
+        },
+        {
+            "id": 32,
+            "title": "Friend request from John Doe",
+            "subtitle": "Connect with new people",
+            "category": "Important",
+            "isRead": true,
+             "imageUrl": "assets/images/order.png"
+        },
+        {
+            "id": 33,
+            "title": "Daily digest from your favorite forum",
+            "subtitle": "See what's new today",
+            "category": "Junk",
+            "isRead": false,
+             "imageUrl": "assets/images/sunset.png"
+        },
+        {
+            "id": 34,
+            "title": "Your payment method has expired",
+            "subtitle": "Update to continue uninterrupted service",
+            "category": "Important",
+            "isRead": false,
+             "imageUrl": "assets/images/sunset.png"
+        },
+        {
+            "id": 35,
+            "title": "Holiday gift guide 2025",
+            "subtitle": "Perfect presents for everyone",
+            "category": "Promotions",
+            "isRead": true,
+             "imageUrl": "assets/images/cup.png"
+        },
+        {
+            "id": 36,
+            "title": "Earn double points this week",
+            "subtitle": "Exclusive loyalty program offer",
+            "category": "Promotions",
+            "isRead": false
+        },
+        {
+            "id": 37,
+            "title": "Alert: Password change required",
+            "subtitle": "Secure your account immediately",
+            "category": "Important",
+            "isRead": false,
+             "imageUrl": "assets/images/lock.png"
+        },
+        {
+            "id": 38,
+            "title": "Event reminder: Tech Conference",
+            "subtitle": "Join us live this Friday",
+            "category": "Important",
+            "isRead": true,
+             "imageUrl": "assets/images/display.png"
+        },
+        {
+            "id": 39,
+            "title": "Music playlist just for you",
+            "subtitle": "Discover new hits today",
+            "category": "Junk",
+            "isRead": false,
+             "imageUrl": "assets/images/guitar.png"
+        },
+        {
+            "id": 40,
+            "title": "Charity fundraiser invitation",
+            "subtitle": "Support a good cause",
+            "category": "Promotions",
+            "isRead": true,
+             "imageUrl": "assets/images/clouds.png"
+        },
+        {
+            "id": 41,
+            "title": "System update successful",
+            "subtitle": "Everything is running smoothly",
+            "category": "Important",
+            "isRead": true,
+             "imageUrl": "assets/images/mirror_circle.png"
+        },
+        {
+            "id": 42,
+            "title": "Special discount on software tools",
+            "subtitle": "Upgrade your productivity",
+            "category": "Promotions",
+            "isRead": false,
+             "imageUrl": "assets/images/display.png"
+        },
+        {
+            "id": 43,
+            "title": "Tips for healthy living",
+            "subtitle": "Simple habits to boost your health",
+            "category": "Junk",
+            "isRead": true,
+             "imageUrl": "assets/images/cup.png"
+        },
+        {
+            "id": 44,
+            "title": "Account verification required",
+            "subtitle": "Click here to confirm your identity",
+            "category": "Important",
+            "isRead": false,
+             "imageUrl": "assets/images/read.png"
+        },
+        {
+            "id": 45,
+            "title": "Back-to-school deals",
+            "subtitle": "Save on supplies and gear",
+            "category": "Promotions",
+            "isRead": true,
+             "imageUrl": "assets/images/display.png"
+        },
+        {
+            "id": 46,
+            "title": "Podcast recommendations",
+            "subtitle": "Your personalized weekly picks",
+            "category": "Junk",
+            "isRead": false,
+             "imageUrl": "assets/images/sunset.png"
+        },
+        {
+            "id": 47,
+            "title": "Cloud storage almost full",
+            "subtitle": "Upgrade for more space",
+            "category": "Important",
+            "isRead": false,
+             "imageUrl": "assets/images/house.png"
+        },
+        {
+            "id": 48,
+            "title": "Congrats! You've unlocked a badge",
+            "subtitle": "Keep up the good work",
+            "category": "Promotions",
+            "isRead": true,
+             "imageUrl": "assets/images/premium.png"
+        },
+        {
+            "id": 49,
+            "title": "Inspirational story of the week",
+            "subtitle": "Read and get motivated",
+            "category": "Junk",
+            "isRead": false,
+             "imageUrl": "assets/images/read.png"
+        },
+        {
+            "id": 50,
+            "title": "Your two-factor authentication is active",
+            "subtitle": "Extra security enabled",
+            "category": "Important",
+            "isRead": true,
+             "imageUrl": "assets/images/lock.png"
+        }
+    ]
+}

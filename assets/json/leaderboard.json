@@ -1,0 +1,62 @@
+{
+  "leaderboard": {
+    "friends": [
+      {
+        "id": 1,
+        "name": "You",
+        "points": 2450,
+        "badges": 8,
+        "imageUrl" : "https://res.cloudinary.com/djt1pthbv/image/upload/v1755508080/TRALY/my_avatar_j21tqi.png"
+      },
+      {
+        "id": 2,
+        "name": "Emma Williams",
+        "points": 2320,
+        "badges": 6,
+          "imageUrl" : "https://res.cloudinary.com/djt1pthbv/image/upload/v1755508080/TRALY/emma_avatar_acilld.png"
+      },
+      {
+        "id": 3,
+        "name": "James Peterson",
+        "points": 2150,
+        "badges": 5,
+          "imageUrl" : "https://res.cloudinary.com/djt1pthbv/image/upload/v1755508080/TRALY/james_avatar_dzprm7.png"
+      },
+      {
+        "id": 4,
+        "name": "Michael Johnson",
+        "points": 1940,
+        "badges": 4,
+          "imageUrl" : "https://res.cloudinary.com/djt1pthbv/image/upload/v1755508081/TRALY/michael_avatar_lq0lya.png"
+      },
+      {
+        "id": 5,
+        "name": "Sophia Garcia",
+        "points": 1895,
+        "badges": 3,
+          "imageUrl" : "https://res.cloudinary.com/djt1pthbv/image/upload/v1755508078/TRALY/sophia_avatar_uclfsg.png"
+      },
+      {
+        "id": 6,
+        "name": "Robert Martínez",
+        "points": 1750,
+        "badges": 2,
+          "imageUrl" : "https://res.cloudinary.com/djt1pthbv/image/upload/v1755508078/TRALY/robert_avatar_l8jdxh.png"
+      },
+      {
+        "id": 7,
+        "name": "Olivia Taylor",
+        "points": 1685,
+        "badges": 1,
+          "imageUrl" : "https://res.cloudinary.com/djt1pthbv/image/upload/v1755508078/TRALY/olivia_avatar_i1hche.png"
+      },
+       {
+        "id": 8,
+        "name": "William Brown",
+        "points": 1540,
+        "badges": 1,
+          "imageUrl" : "https://res.cloudinary.com/djt1pthbv/image/upload/v1755553512/TRALY/william_avatar_mim2nu.png"
+      }
+    ]
+  }
+}
