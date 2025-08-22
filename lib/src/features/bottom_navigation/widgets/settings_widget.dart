@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:traly/gen/assets.gen.dart';
 import 'package:traly/src/shared/constants.dart';
 import 'package:traly/src/shared/extensions/spacing_ext.dart';
+import 'package:traly/src/theme/color/color_scheme.dart';
 import 'package:traly/src/theme/typography/fontweight_ext.dart';
 import 'package:traly/src/theme/typography/typography_extension_on_context.dart';
 
@@ -48,8 +49,8 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                         Container(
                           width: 35.w,
                           height: 35.h,
-                          decoration: const BoxDecoration(
-                            color: Color(0xFF8A2BE2),
+                          decoration: BoxDecoration(
+                            color: AppColors.primary.shade600,
                             shape: BoxShape.circle,
                           ),
                           child: widget.icon.svg(

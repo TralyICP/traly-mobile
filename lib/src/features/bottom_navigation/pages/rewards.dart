@@ -1,10 +1,13 @@
+import 'dart:math';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:traly/gen/assets.gen.dart';
+import 'package:traly/src/features/bottom_navigation/widgets/redemption_widget.dart';
 import 'package:traly/src/features/bottom_navigation/widgets/reward_widget.dart';
+import 'package:traly/src/features/settings/widgets/achievement_circle.dart';
 import 'package:traly/src/shared/constants.dart';
 import 'package:traly/src/shared/extensions/spacing_ext.dart';
 import 'package:traly/src/shared/utils/app_texts.dart';
@@ -102,12 +105,12 @@ class _RewardsState extends ConsumerState<Rewards> {
                           borderRadius: BorderRadius.circular(30.r),
                           boxShadow: [
                             BoxShadow(
-                              color: const Color(0xFFB96BF3)
+                              color: AppColors.primary.shade300
                                   .withValues(alpha: 0.3),
                               spreadRadius: 4,
-                              blurRadius: 2,
+                              blurRadius: 3,
                               offset: const Offset(
-                                  3, 3), // changes position of shadow
+                                  0, 0), // changes position of shadow
                             ),
                           ],
                         ),
@@ -126,12 +129,24 @@ class _RewardsState extends ConsumerState<Rewards> {
                             TralyConstants.mediumSpace.h.vSpace,
                             Row(
                               children: [
-                                CircleAvatar(
-                                  maxRadius: 30.r,
-                                  //  minRadius: 54.r,
-                                ),
-                                // CircularProgressIndicator(
+                              AchievementCircle(
+                                isAchievement: false,
+                                progress: .4,
+                              width: 60.w,
+                              height: 60.w,
+                              ),
+                                // const CircularPointsIndicator(progress: .4),
+                                // CircleAvatar(
 
+                                //   maxRadius: 30.r,
+                                //   child: CircularProgressIndicator(
+                                //     value: .4,
+                                //     valueColor: ,
+                                //     backgroundColor: Colors.transparent,
+                                //     strokeWidth: 5.w,
+                                //     color: AppColors.primary.shade100,
+                                //     strokeAlign: 5.w,
+                                //   ),
                                 // ),
                                 TralyConstants.mediumSpace.w.hSpace,
                                 Column(
@@ -194,6 +209,7 @@ class _RewardsState extends ConsumerState<Rewards> {
                               points: '7,500'),
                           TralyConstants.smallSpaceXX.w.hSpace,
                           RewardWidget(
+                            isLower: true,
                             icon: Assets.vectors.headPhones,
                             title: 'Priority Support',
                             points: '2,000',
@@ -221,53 +237,66 @@ class _RewardsState extends ConsumerState<Rewards> {
   }
 }
 
-class RedemptionWidget extends StatelessWidget {
-  const RedemptionWidget({super.key});
+class CircularPointsIndicator extends StatelessWidget {
+  final double progress;
+
+  const CircularPointsIndicator({super.key, required this.progress});
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-        borderRadius: BorderRadius.circular(12.r),
-        child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-          child: Container(
-            width: 1.sw,
-            height: 190.h,
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: AppColors.whites.withValues(alpha: .2),
-              ),
-              boxShadow: [
-                BoxShadow(
-                  color: Color(0xFFB96BF3).withValues(alpha: 0.3),
-                  spreadRadius: 4,
-                  blurRadius: 3,
-                  offset: const Offset(3, 3), // changes position of shadow
-                ),
-              ],
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Assets.vectors.stars.svg(
-                  width: 30.w,
-                ),
-                TralyConstants.mediumSpace.h.vSpace,
-                Text(
-                  'No ${AppTexts.recentRedemptions.toLowerCase()}.',
-                  style: context.bodyMedium?.regular.copyWith(
-                    color: AppColors.whites.withValues(alpha: .6),
-                  ),
-                ),
-                TralyConstants.tinySpace.h.vSpace,
-                Text(
-                  AppTexts.rewardsWillAppear,
-                  style: context.bodySmall?.regular,
-                ),
-              ],
-            ),
-          ),
-        ));
+    return CustomPaint(
+      size: Size(60.w, 60.w),
+      painter: _GradientCircularProgressPainter(progress),
+    );
   }
+}
+
+class _GradientCircularProgressPainter extends CustomPainter {
+  final double progress;
+
+  _GradientCircularProgressPainter(this.progress);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final strokeWidth = 5.w;
+    final radius = (size.width / 2) - strokeWidth;
+
+    final center = Offset(size.width / 2, size.height / 2);
+
+    // Background circle
+    final backgroundPaint = Paint()
+      ..color = AppColors.primary.shade200
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = strokeWidth
+      ..strokeCap = StrokeCap.round;
+
+    canvas.drawCircle(center, radius, backgroundPaint);
+
+    final rect = Rect.fromCircle(center: center, radius: radius);
+
+    final gradient = SweepGradient(
+      startAngle: 0.0,
+      endAngle: 2 * pi,
+      stops: const [
+        .6,
+        1.0,
+      ],
+      colors: [
+        AppColors.secondary.shade500,
+        AppColors.secondary.shade500,
+      ],
+    );
+
+    final foregroundPaint = Paint()
+      ..shader = gradient.createShader(rect)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = strokeWidth
+      ..strokeCap = StrokeCap.round;
+
+    final sweepAngle = 2 * pi * progress;
+    canvas.drawArc(rect, -pi / 2, sweepAngle, false, foregroundPaint);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => true;
 }
