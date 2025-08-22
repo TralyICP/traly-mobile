@@ -11,42 +11,51 @@ import 'package:traly/src/theme/typography/typography_extension_on_context.dart'
 
 class AchievementCircle extends StatelessWidget {
   final double progress; // e.g. 0.4 means 2/5 days
-  final String subtitle;
+  final String? subtitle;
+  final double? width;
+  final double? height;
+  final bool? isAchievement;
 
   const AchievementCircle({
     super.key,
     required this.progress,
-    required this.subtitle,
+ this.subtitle,
+    this.width,
+    this.height,
+    this.isAchievement = true,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-        onTap: (){
+        onTap: () {
           log('Inbox Zero Circle tapped');
           showInboxZeroPopUp(context);
-        },        child: SizedBox(
-          width: 160.w,
-          height: 160.h,
+        },
+        child: SizedBox(
+          width: width ?? 160.w,
+          height: height ?? 160.h,
           child: CustomPaint(
             size: Size(160.w, 160.h),
             painter: CircleProgressPainter(progress),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Assets.vectors.mark.svg(
-                  width: 25.w,
-                ),
-                Text(
-                  '${AppTexts.inboxZero} Streak',
-                  style: context.labelLarge?.medium,
-                ),
-                Text(
-                  subtitle,
-                  style: context.bodyLarge?.semiBold,
-                ),
-              ],
-            ),
+            child: isAchievement == true
+                ? Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Assets.vectors.mark.svg(
+                        width: 25.w,
+                      ),
+                      Text(
+                        '${AppTexts.inboxZero} Streak',
+                        style: context.labelLarge?.medium,
+                      ),
+                      Text(
+                        subtitle ?? '',
+                        style: context.bodyLarge?.semiBold,
+                      ),
+                    ],
+                  )
+                : const SizedBox.shrink(),
           ),
         ));
   }
@@ -72,13 +81,13 @@ class CircleProgressPainter extends CustomPainter {
     final paint = Paint()
       ..shader = gradient.createShader(rect)
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 12
+      ..strokeWidth = 6.w
       ..strokeCap = StrokeCap.round;
 
     final backgroundPaint = Paint()
       ..color = Colors.white24
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 12;
+      ..strokeWidth = 6.w;
 
     final center = size.center(Offset.zero);
     final radius = size.width / 2;
