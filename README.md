@@ -10,30 +10,38 @@ Traly leverages Flutter’s **fast development cycle (hot reload)**, expressive 
 ## 📦 Project Structure Overview  
 The app adopts a **feature-oriented modular design**, ensuring that each module is self-contained, reusable, and easy to extend.  
 
-TRALY/
-├── android/                    # Android-specific configuration
-├── ios/                        # iOS-specific configuration
-├── assets/                     # Images, icons, vectors, fonts
-│ ├── icons/
-│ ├── images/
-│ └── vectors/
-├── fonts/                      # Custom fonts
-├── lib/
-│ ├── gen/                      # Auto-generated files (flutter_gen)
-│ └── src/
-│ ├── app/                      # Global app setup (router, providers, theme, constants)
-│ ├── features/
-│ │ └── bottom_navigation/
-│ │ ├── controller/             # Riverpod controllers, business logic
-│ │ ├── pages/                  # Page content (Home, Rewards, Settings, etc.)
-│ │ ├── screens/
-│ │ ├── views/                  # UI building blocks (e.g. BottomNavBar)
-│ │ └── widgets/                # Reusable widgets (cards, tiles, etc.)
-│ └── clean/                    # (Future features)
-└── pubspec.yaml # Dependencies & metadata
 
-yaml
-Copy code
+## 📂 Project Structure
+
+```text
+TRALY/
+├── android/                # Android-specific configuration
+├── ios/                    # iOS-specific configuration
+├── assets/                 # Images, icons, vectors, fonts
+│   ├── images/
+│   ├── icons/
+│   ├── fonts/
+│   └── translations/
+├── lib/
+│   └── src/
+│       └── app/
+│           └── features/   # Feature-first folder structure
+│               ├── bottom_navigation/
+│               │   ├── controller/      # State management & logic
+│               │   ├── pages/           # Screens (Home, Settings, etc.)
+│               │   │   ├── home_page.dart
+│               │   │   └── settings.dart
+│               │   └── widgets/         # Reusable UI components
+│               ├── leaderboard/         # Leaderboard feature module
+│               └── settings/            # Settings module
+│                   └── widgets/
+│                       ├── achievement_circle.dart
+│                       └── inbox_zero_pop_up.dart
+├── gen/                    # Auto-generated files (e.g., build_runner)
+├── pubspec.yaml            # Project dependencies & assets
+└── main.dart               # Application entry point
+
+```
 
 ---
 
@@ -50,7 +58,6 @@ flutter pub get
 3. Run the project:
 
 ```
-
 flutter run
 ```
 
