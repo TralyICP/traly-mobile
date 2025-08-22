@@ -107,6 +107,7 @@ class _BadgesPageState extends State<AchievementsPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    TralyConstants.smallSpace.h.vSpace,
                     Center(
                       child: InkWell(
                         onTap: () {

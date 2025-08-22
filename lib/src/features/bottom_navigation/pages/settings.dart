@@ -54,8 +54,7 @@ class _SettingsState extends State<Settings> {
                               width: 3.w,
                               color: AppColors.secondary.shade400,
                             )),
-                        child: Assets.images.myAvatar
-                            .image(fit: BoxFit.cover),
+                        child: Assets.images.myAvatar.image(fit: BoxFit.cover),
                       ),
                       TralyConstants.mediumSpace.h.vSpace,
                       Text(
@@ -68,112 +67,102 @@ class _SettingsState extends State<Settings> {
                           color: AppColors.whites.withValues(alpha: .7),
                         ),
                       ),
-
-
-
-
-
                     ],
-
-
                   ),
                 ),
-            
-
-                      TralyConstants.mediumSpace.h.vSpace,
-                Expanded(child: SingleChildScrollView(
+                TralyConstants.mediumSpace.h.vSpace,
+                Expanded(
+                    child: SingleChildScrollView(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-    TralyConstants.smallSpaceXX.h.vSpace,
-  Text(
-                  AppTexts.account,
-                  style: context.bodyMedium?.medium,
-                ),
-                TralyConstants.smallSpaceX.h.vSpace,
-                SettingsWidget(
-                    icon: Assets.vectors.profile, text: AppTexts.editProfile),
-                TralyConstants.smallSpaceX.h.vSpace,
-                SettingsWidget(
-                    icon: Assets.vectors.notifs, text: AppTexts.notifs),
-                TralyConstants.smallSpaceX.h.vSpace,
-                TralyConstants.bigSpace.h.vSpace,
-                Text(
-                  AppTexts.inbox,
-                  style: context.bodyMedium?.medium,
-                ),
-                TralyConstants.smallSpaceX.h.vSpace,
-                SettingsWidget(
-                    icon: Assets.vectors.connected,
-                    text: AppTexts.connectedAccs),
-                TralyConstants.smallSpaceX.h.vSpace,
-                SettingsWidget(
-                    icon: Assets.vectors.filters, text: AppTexts.filters),
-                TralyConstants.smallSpaceX.h.vSpace,
-                SettingsWidget(
-                    icon: Assets.vectors.senders, text: AppTexts.safeSenders),
-                TralyConstants.bigSpace.h.vSpace,
-                Text(
-                  AppTexts.rewards,
-                  style: context.bodyMedium?.medium,
-                ),
-                TralyConstants.smallSpaceX.h.vSpace,
-                SettingsWidget(
-                    icon: Assets.vectors.premiumStar,
-                    text: AppTexts.pointsHistory),
-                TralyConstants.smallSpaceX.h.vSpace,
-                SettingsWidget(
-                    icon: Assets.vectors.giftCard,
-                    text: AppTexts.redemptions),
-                TralyConstants.bigSpace.h.vSpace,
-                Text(
-                  AppTexts.app,
-                  style: context.bodyMedium?.medium,
-                ),
-                TralyConstants.smallSpaceX.h.vSpace,
-                SettingsWidget(
-                    icon: Assets.vectors.customTheme,
-                    text: AppTexts.pointsHistory),
-                TralyConstants.smallSpaceX.h.vSpace,
-                SettingsWidget(
-                    icon: Assets.vectors.about, text: AppTexts.about),
-                TralyConstants.bigSpace.h.vSpace,
-                Text(
-                  AppTexts.achievements,
-                  style: context.bodyLarge?.medium,
-                ),
-                TralyConstants.smallSpaceX.h.vSpace,
-                SettingsWidget(
-                    onTap: () {
-                      context
-                          .pushNamed(AppRoute.settings.name, pathParameters: {
-                        "page": SettingsPage.yourBadges.name,
-                      });
-                    },
-                    icon: Assets.vectors.badge,
-                    text: AppTexts.badges),
-                TralyConstants.ctaIconSize.h.vSpace,
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Assets.vectors.signOut.svg(width: 20.w),
-                    Text(
-                      AppTexts.signOut,
-                      style: context.bodyMedium?.medium.copyWith(
-                        color: const Color(0xFFFF6B8B),
+                      TralyConstants.smallSpaceXX.h.vSpace,
+                      Text(
+                        AppTexts.account,
+                        style: context.bodyMedium?.medium,
                       ),
-                    ),
-                  ],
-                ),
-                TralyConstants.ctaIconSize.h.vSpace,
-                TralyConstants.appBarHeight.h.vSpace,
+                      TralyConstants.smallSpaceX.h.vSpace,
+                      SettingsWidget(
+                          icon: Assets.vectors.profile,
+                          text: AppTexts.editProfile),
+                      TralyConstants.smallSpaceX.h.vSpace,
+                      SettingsWidget(
+                          icon: Assets.vectors.notifs, text: AppTexts.notifs),
+                      TralyConstants.smallSpaceX.h.vSpace,
+                      TralyConstants.bigSpace.h.vSpace,
+                      Text(
+                        AppTexts.inbox,
+                        style: context.bodyMedium?.medium,
+                      ),
+                      TralyConstants.smallSpaceX.h.vSpace,
+                      SettingsWidget(
+                          icon: Assets.vectors.connected,
+                          text: AppTexts.connectedAccs),
+                      TralyConstants.smallSpaceX.h.vSpace,
+                      SettingsWidget(
+                          icon: Assets.vectors.filters, text: AppTexts.filters),
+                      TralyConstants.smallSpaceX.h.vSpace,
+                      SettingsWidget(
+                          icon: Assets.vectors.senders,
+                          text: AppTexts.safeSenders),
+                      TralyConstants.bigSpace.h.vSpace,
+                      Text(
+                        AppTexts.rewards,
+                        style: context.bodyMedium?.medium,
+                      ),
+                      TralyConstants.smallSpaceX.h.vSpace,
+                      SettingsWidget(
+                          icon: Assets.vectors.premiumStar,
+                          text: AppTexts.pointsHistory),
+                      TralyConstants.smallSpaceX.h.vSpace,
+                      SettingsWidget(
+                          icon: Assets.vectors.giftCard,
+                          text: AppTexts.redemptions),
+                      TralyConstants.bigSpace.h.vSpace,
+                      Text(
+                        AppTexts.app,
+                        style: context.bodyMedium?.medium,
+                      ),
+                      TralyConstants.smallSpaceX.h.vSpace,
+                      SettingsWidget(
+                          icon: Assets.vectors.customTheme,
+                          text: AppTexts.pointsHistory),
+                      TralyConstants.smallSpaceX.h.vSpace,
+                      SettingsWidget(
+                          icon: Assets.vectors.about, text: AppTexts.about),
+                      TralyConstants.bigSpace.h.vSpace,
+                      Text(
+                        AppTexts.achievements,
+                        style: context.bodyLarge?.medium,
+                      ),
+                      TralyConstants.smallSpaceX.h.vSpace,
+                      SettingsWidget(
+                          onTap: () {
+                            context.pushNamed(AppRoute.settings.name,
+                                pathParameters: {
+                                  "page": SettingsPage.yourBadges.name,
+                                });
+                          },
+                          icon: Assets.vectors.badge,
+                          text: AppTexts.badges),
+                      TralyConstants.ctaIconSize.h.vSpace,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Assets.vectors.signOut.svg(width: 20.w),
+                          Text(
+                            AppTexts.signOut,
+                            style: context.bodyMedium?.medium.copyWith(
+                              color: const Color(0xFFFF6B8B),
+                            ),
+                          ),
+                        ],
+                      ),
+                      TralyConstants.ctaIconSize.h.vSpace,
+                      TralyConstants.appBarHeight.h.vSpace,
                     ],
                   ),
                 )),
-
-
-
-              
               ],
             ),
           ),

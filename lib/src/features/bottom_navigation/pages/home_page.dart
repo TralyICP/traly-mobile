@@ -100,38 +100,35 @@ class _HomeState extends State<Home> {
                   child: SingleChildScrollView(
                     physics: const BouncingScrollPhysics(),
                       child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Align(
-                              alignment: Alignment.centerLeft,
-                              child: Container(
-                                              padding: EdgeInsets.symmetric(
-                                                horizontal: 16.w,
-                                                vertical: 4.h,
-                                              ),
-                                              width: 140.w,
-                                              decoration: BoxDecoration(
-                                                  color: AppColors.whites.withValues(alpha: .2),
-                                                  borderRadius: BorderRadius.circular(20.r)),
-                                              child: Row(
-                                                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                                children: [
-                                                  Assets.images.stars.image(),
-                                                  Text(
-                                                    '${AppTexts.pointsNum} pts •',
-                                                    style: context.labelLarge?.medium,
-                                                  ),
-                                                  InkWell(
-                                                    child: Text(
-                                                      AppTexts.claim,
-                                                      style: context.labelLarge?.semiBold
-                              .copyWith(color: AppColors.primary.shade400),
-                                                    ),
-                                                  )
-                                                ],
-                                              ),
+                            Container(
+                                            padding: EdgeInsets.symmetric(
+                                              horizontal: 16.w,
+                                              vertical: 4.h,
                                             ),
-                            ),
+                                            width: 140.w,
+                                            decoration: BoxDecoration(
+                                                color: AppColors.whites.withValues(alpha: .2),
+                                                borderRadius: BorderRadius.circular(20.r)),
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                              children: [
+                                                Assets.images.stars.image(),
+                                                Text(
+                                                  '${AppTexts.pointsNum} pts •',
+                                                  style: context.labelLarge?.medium,
+                                                ),
+                                                InkWell(
+                                                  child: Text(
+                                                    AppTexts.claim,
+                                                    style: context.labelLarge?.semiBold
+                            .copyWith(color: AppColors.primary.shade400),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                          ),
                     TralyConstants.bigSpace.h.verticalSpace,
 
                     Center(
@@ -144,12 +141,12 @@ class _HomeState extends State<Home> {
                             width: 260.w,
                             height: 260.w,
                             decoration: BoxDecoration(
-                                color: const Color(0xFF8A2BE2)
+                                color: AppColors.primary.shade600
                                     .withValues(alpha: .2),
                                 shape: BoxShape.circle,
                                 boxShadow: [
                                   BoxShadow(
-                                    color: Color(0xFF8A2BE2)
+                                    color: AppColors.primary.shade600
                                         .withValues(alpha: 0.3),
                                     spreadRadius: 5,
                                     blurRadius: 3,
@@ -190,29 +187,35 @@ class _HomeState extends State<Home> {
                     TralyConstants.mediumSpaceX.h.verticalSpace, //24
                     TralyConstants.minuteSpace.h.verticalSpace,
 
-                    Text(
-                      textAlign: TextAlign.center,
-                      AppTexts.inboxHealth,
-                      style: context.titleSmall?.medium.copyWith(),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                      
+                        AppTexts.inboxHealth,
+                        style: context.titleSmall?.medium.copyWith(),
+                      ),
                     ),
 
                     TralyConstants.mediumSpaceM.h.verticalSpace,
-                    Container(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: 81.w, vertical: 14.h),
-                        decoration: BoxDecoration(
-                            gradient: LinearGradient(colors: [
-                              AppColors.primary.shade400,
-                              AppColors.secondary.shade500,
-                            ], stops: const [
-                              .4,
-                              1.0,
-                            ]),
-                            borderRadius: BorderRadius.circular(24.r)),
-                        child: Text(
-                          AppTexts.cleanNow,
-                          style: context.bodyLarge?.semiBold.copyWith(),
-                        )),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Container(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 81.w, vertical: 14.h),
+                          decoration: BoxDecoration(
+                              gradient: LinearGradient(colors: [
+                                AppColors.primary.shade400,
+                                AppColors.secondary.shade500,
+                              ], stops: const [
+                                .4,
+                                1.0,
+                              ]),
+                              borderRadius: BorderRadius.circular(24.r)),
+                          child: Text(
+                            AppTexts.cleanNow,
+                            style: context.bodyLarge?.semiBold.copyWith(),
+                          )),
+                    ),
 
                     TralyConstants.mediumSpaceX.h.verticalSpace,
                     Row(

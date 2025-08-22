@@ -11,11 +11,13 @@ class RewardWidget extends StatefulWidget {
   final SvgGenImage icon;
   final String title;
   final String points;
+  final bool? isLower;
   const RewardWidget(
       {super.key,
       required this.icon,
       required this.title,
-      required this.points});
+      required this.points,
+      this.isLower = false});
 
   @override
   State<RewardWidget> createState() => _RewardWidgetState();
@@ -30,13 +32,11 @@ class _RewardWidgetState extends State<RewardWidget> {
       padding: EdgeInsets.all(17.w),
       decoration: BoxDecoration(
         color: AppColors.primary.shade700,
-        border: Border.all(
-          color: AppColors.whites.withValues(alpha: .3)
-        ),
+        border: Border.all(color: AppColors.whites.withValues(alpha: .3)),
         borderRadius: BorderRadius.circular(24.r),
         boxShadow: [
           BoxShadow(
-            color: Color(0xFFB96BF3).withValues(alpha: 0.3),
+            color: AppColors.primary.shade300.withValues(alpha: 0.3),
             spreadRadius: 4,
             blurRadius: 3,
             offset: const Offset(0, 0), // changes position of shadow
@@ -50,15 +50,18 @@ class _RewardWidgetState extends State<RewardWidget> {
           Container(
             width: 35.w,
             height: 35.h,
-            decoration: const BoxDecoration(
-              color: Color(0xFF8A2BE2),
+            decoration: BoxDecoration(
+              color: AppColors.primary.shade600,
               shape: BoxShape.circle,
             ),
             child: widget.icon.svg(fit: BoxFit.scaleDown),
           ),
           TralyConstants.smallSpaceX.h.vSpace,
-          Text(widget.title, style: context.bodyMedium?.medium,),
-           TralyConstants.tinySpace.h.vSpace,
+          Text(
+            widget.title,
+            style: context.bodyMedium?.medium,
+          ),
+          TralyConstants.tinySpace.h.vSpace,
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -71,7 +74,15 @@ class _RewardWidgetState extends State<RewardWidget> {
                 width: 62.w,
                 height: 24.h,
                 decoration: BoxDecoration(
-                    color: AppColors.primary.shade200,
+                    gradient: widget.isLower == false
+                        ? LinearGradient(colors: [
+                            AppColors.primary.shade200,
+                            AppColors.primary.shade200
+                          ])
+                        : LinearGradient(colors: [
+                            AppColors.primary.shade400,
+                            AppColors.secondary.shade500,
+                          ]),
                     borderRadius: BorderRadius.circular(14.r)),
                 padding: TralyConstants.smallSpace.w.hEdgeInsets,
                 child: Center(
