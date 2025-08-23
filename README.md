@@ -71,6 +71,11 @@ flutter run -d android
 flutter run -d ios
 ```
 
+## Pitch and Demo Videos
+- **Pitch Video**: 
+- **Demo Video**: https://youtu.be/4Z77soGF9PA?feature=shared
+
+
 ##  🧠 Architecture Highlights
 ### Each feature is organized into:
 
