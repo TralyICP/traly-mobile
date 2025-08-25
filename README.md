@@ -1,17 +1,17 @@
 # Traly — Flutter Project  
 
-## ⚡ Framework  
+## Framework  
 This project is built using **Flutter** , Google’s open-source UI toolkit for building high-performance, natively compiled applications for mobile, web, and desktop — all from a single codebase.  
 
 Traly leverages Flutter’s **fast development cycle (hot reload)**, expressive UI, and a rich ecosystem of packages to deliver a modern, scalable app with clean architecture.  
 
 ---
 
-## 📦 Project Structure Overview  
+## Project Structure Overview  
 The app adopts a **feature-oriented modular design**, ensuring that each module is self-contained, reusable, and easy to extend.  
 
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 TRALY/
@@ -45,7 +45,7 @@ TRALY/
 
 ---
 
-## 🚀 Getting Started  
+## Getting Started  
 
 1. Ensure **Flutter**  and **Dart**  are installed.  
 
@@ -76,7 +76,7 @@ flutter run -d ios
 - **Demo Video**: https://youtu.be/4Z77soGF9PA?feature=shared
 
 
-##  🧠 Architecture Highlights
+## Architecture Highlights
 ### Each feature is organized into:
 
 - **controller/** → Riverpod providers & state controllers
@@ -90,14 +90,14 @@ flutter run -d ios
 
 - **widgets/** → Reusable UI components
 
-##  🔁 State Management — Riverpod
+## State Management — Riverpod
 Uses **StateProvider**, **Notifier**, and **AsyncNotifier** for state control.
 
 No **BuildContext** dependency inside business logic.
 
 Decoupled, testable, and reactive state handling.
 
-##  🧭 Navigation — GoRouter
+## Navigation — GoRouter
 Navigation is powered by **GoRouter**.
 
 Provides clean, declarative route definitions.
@@ -106,7 +106,7 @@ Enables nested navigation and deep linking.
 
 Easier to scale compared to Navigator 1.0.
 
-##  🎨 Styling & Responsiveness
+## Styling & Responsiveness
 
 - Typography: Implemented using google_fonts for a modern, sleek look.
 
@@ -116,7 +116,7 @@ Easier to scale compared to Navigator 1.0.
 
 - Responsive UI: Built with flutter_screenutil for consistent scaling across devices.
 
-##  📁 Assets & Icons
+## Assets & Icons
 Assets are defined in pubspec.yaml.
 
 Organized into:
@@ -130,23 +130,23 @@ Organized into:
 flutter_gen is used for safe, auto-generated asset references.
 
 
-##  ✅ Completed Features
+## Completed Features
 
-### 🏠 Clean / Emails Page  
+### Clean / Emails Page  
 - Scrollable email boxes
 - Fliter for the emails (Important, Promotions & Junk) 
 
-### ⚙️ Settings  
+### Settings  
 - Centralized screen for app, rewards and account options.  
 - Clean, minimal layout with reusable setting tiles.  
 - Supports navigation to sub-pages, and future extensibility.  
 
 
-### 📱 Bottom Navigation
+### Bottom Navigation
 Built from scratch (custom implementation, not default BottomNavigationBar)
 
 
-##  📋 Final Notes
+## Final Notes
 
 ### This codebase is designed to be:
 
@@ -160,7 +160,7 @@ Built from scratch (custom implementation, not default BottomNavigationBar)
 
 
 
-## 📸 Screenshots  
+## Screenshots  
 
 | Onboarding | Home | Emails |
 |------------|------|--------|
